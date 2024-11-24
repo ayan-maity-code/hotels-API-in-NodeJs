@@ -22,7 +22,7 @@ router.post("/", async (req, res) => {
 router.get("/", async (req, res) => {
   try {
     const data = await Person.find();
-    console.log("Data Extracted");
+    console.log("Person Data Extracted");
     res.status(200).json(data);
   } catch (error) {
     console.log(error);
