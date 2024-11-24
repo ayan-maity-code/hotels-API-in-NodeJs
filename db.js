@@ -3,12 +3,10 @@ const mongoose = require('mongoose');
 //define  connection
 const mongoURL = 'mongodb://localhost:27017/hotels'; // replace hotels with any name 
 
-// established connection
-mongoose.connect(mongoURL,{
-    useNewUrlParser:true, // resquired parameter
-    useUnifiedTopology:true // required parameter
+// const mongoURL = 'mongodb+srv://ayan309:ayan1234@cluster0.dfzrz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
 
-})
+// established connection
+mongoose.connect(mongoURL);
 
 // get the default connection
 const db = mongoose.connection;
