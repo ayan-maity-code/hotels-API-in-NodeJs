@@ -14,7 +14,7 @@ passport.use(new localStrategy(async (username,password,done)=>{
         return done(null,false,{message:"User not found"});
       }
 
-      const isPasswordmatch = await user.password == password?true:false;
+      const isPasswordmatch = await user.comparePassword(password);
       if(isPasswordmatch){
        return done(null,user);
       }else{
